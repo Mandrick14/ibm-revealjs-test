@@ -1,0 +1,41 @@
+/**
+ * A simple theme for reveal.js presentations, similar
+ * to the default theme. The accent color is darkblue.
+ */
+
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+
+
+// Include theme-specific fonts
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap);
+
+
+// Override theme settings (see ../template/settings.scss)
+$mainFont: 'Montserrat', sans-serif;
+$mainColor: #fff;
+$headingFont: 'Montserrat', sans-serif;
+$headingColor: #fff;
+$headingTextShadow: none;
+$headingTextTransform: none;
+$headingFontWeight: 600;
+$backgroundColor: #000;
+$linkColor: #1FDFDF;
+$linkColorHover: lighten( $linkColor, 20% );
+$selectionBackgroundColor: rgba(0, 0, 0, 0);
+
+img {
+    border-radius: 25px;
+}
+
+// Change text colors against dark slide backgrounds
+@include dark-bg-text-color(#fff);
+
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
