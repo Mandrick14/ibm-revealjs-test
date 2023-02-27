@@ -2,7 +2,8 @@
  * A simple theme for reveal.js presentations, similar
  * to the default theme. The accent color is darkblue.
  */
-@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap);
+ @import url(./fonts/IBM-Plex-Sans/ibm-plex-sans.css);
+ @import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap);
 img {
   border-radius: 12px;
 }
@@ -11,17 +12,26 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
   color: #fff;
 }
 
+/*==============================================
+Fonts
+==============================================*/
+@font-face {
+  font-family: 'IBM Plex Sans';
+  src: url('fonts/IBM-Plex-Sans/IBMPlexSans-Regular.ttf') format('ttf'),
+      url('/dist/theme/fonts/IBM-Plex-Sans/IBMPlexSans-Regular-V01.1.otf') format('otf')
+}
+
 /*********************************************
  * GLOBAL STYLES
  *********************************************/
 :root {
   --r-background-color: #fff;
-  --r-main-font: Montserrat, sans-serif;
+  --r-main-font: IBM Plex Sans, sans-serif;
   --r-main-font-size: 30px;
   --r-main-color: #fff;
   --r-block-margin: 20px;
   --r-heading-margin: 0 0 20px 0;
-  --r-heading-font: Montserrat, sans-serif;
+  --r-heading-font: IBM Plex Sans;
   --r-heading-color: #fff;
   --r-heading-line-height: 1.2;
   --r-heading-letter-spacing: normal;
@@ -34,7 +44,7 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
   --r-heading3-size: 1.55em;
   --r-heading4-size: 1em;
   --r-code-font: monospace;
-  --r-link-color: #2557a7;
+  --r-link-color: #0043ce;
   --r-link-color-dark: #fff;
   --r-link-color-hover: #000;
   --r-selection-background-color: rgba(0, 0, 0, 0);
