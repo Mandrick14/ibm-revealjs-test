@@ -9,6 +9,7 @@
 		<link rel="stylesheet" href="dist/reset.css">
 		<link rel="stylesheet" href="dist/reveal.css">
 		<link rel="stylesheet" href="dist/theme/ibm.css">
+        <link rel="stylesheet" href="plugin/customcontrols/style.css">
 
 		<!-- Theme used for syntax highlighted code -->
 		<link rel="stylesheet" href="plugin/highlight/monokai.css">
@@ -19,19 +20,26 @@
 			<div class="slides">
                 <!-- demo 1 -->
                     <section  data-background-color="#000">
-                        <section data-background-color="#000">
+                        <section>
                             <h2>IBM Slide Deck Test</h2>
                             <h3>123456789</h3>
+                            <img src="https://www.ibm.com/design/language/fd83a72512411fed1b18e363306cb7ef/rebus-dark.svg" width="auto" height="auto">
                         </section>
                         <section data-background-video-loop="true" data-background-video="https://www.ibm.com/design/language/videos/animation/animation-overview-pe.mp4">
                             <h2>Animated MP4 Loop</h2>
                         </section>
-                        <section data-background-iframe="https://domenicobrz.github.io/webgl/projects/DOF%20lines/"
+
+                        <section data-background-color="#fff">
+                            <h2 style="color: #000">Video</h2>
+                            <video src="/img/IBM_Tennis.mp4" data-autoplay></video>
+                        </section>
+
+                        <section data-background-iframe="https://www.ibm.com/"
                                 data-background-interactive>
                         <h2>Iframe</h2>
                         </section>
 
-                        <section data-background-iframe="https://camera-webgi.vercel.app/"
+                        <section data-background-iframe="https://game.vaumb7z0eoa.us-east.codeengine.appdomain.cloud/"
                         data-background-interactive>
                         <h2>Iframe</h2>
                         </section>
@@ -51,30 +59,30 @@
                     </section>
 
                     <section  data-background-color="#000">
-                        <section data-background-image="slides/demos/Slide4.jpeg"></section>
+                        <!-- <section data-background-image="slides/demos/Slide4.jpeg"></section>
                         <section data-background-image="slides/demos/Slide5.jpeg"></section>
                         <section data-background-image="slides/demos/Slide6.jpeg"></section>
                         <section data-background-image="slides/demos/Slide7.jpeg"></section>
                         <section data-background-image="slides/demos/Slide8.jpeg"></section>
-                        <section data-background-image="slides/demos/Slide9.jpeg"></section>
-                        <!-- <section  data-background-color="#fff">
+                        <section data-background-image="slides/demos/Slide9.jpeg"></section> -->
+                        <section  data-background-color="#000">
                             <img src="slides/demos/Slide4.jpeg" width="auto" height="auto">
                         </section>
-                        <section  data-background-color="#fff">
+                        <section  data-background-color="#000">
                             <img src="slides/demos/Slide5.jpeg" width="auto" height="auto">
                         </section>
-                        <section  data-background-color="#fff">
+                        <section  data-background-color="#000">
                             <img src="slides/demos/Slide6.jpeg" width="auto" height="auto">
                         </section>
-                        <section  data-background-color="#fff">
+                        <section  data-background-color="#000">
                             <img src="slides/demos/Slide7.jpeg" width="auto" height="auto">
                         </section>
-                        <section  data-background-color="#fff">
+                        <section  data-background-color="#000">
                             <img src="slides/demos/Slide8.jpeg" width="auto" height="auto">
                         </section>
-                        <section  data-background-color="#fff">
+                        <section  data-background-color="#000">
                             <img src="slides/demos/Slide9.jpeg" width="auto" height="auto">
-                        </section> -->
+                        </section>
                     </section>
 
                     <section  data-background-color="#000">
@@ -303,13 +311,33 @@
 		<script src="plugin/notes/notes.js"></script>
 		<script src="plugin/markdown/markdown.js"></script>
 		<script src="plugin/highlight/highlight.js"></script>
+        <script src="plugin/customcontrols/plugin.js"></script>
 		<script>
 			// More info about initialization & config:
 			// - https://revealjs.com/initialization/
 			// - https://revealjs.com/config/
 			Reveal.initialize({
 				hash: true,
-
+                customcontrols: {
+                    controls: [
+                    {
+                        id: 'toggle-overview',
+                        title: 'Toggle overview (O)',
+                        icon: '<i class="fa fa-th"></i>',
+                        action: 'Reveal.toggleOverview();'
+                    },
+                    {
+                        icon: '<i class="fa fa-pen-square"></i>',
+                        title: 'Toggle chalkboard (B)',
+                        action: 'RevealChalkboard.toggleChalkboard();'
+                    },
+                    {
+                        icon: '<i class="fa fa-pen"></i>',
+                        title: 'Toggle notes canvas (C)',
+                        action: 'RevealChalkboard.toggleNotesCanvas();'
+                    }
+                    ]
+                },
 				// Learn about plugins: https://revealjs.com/plugins/
 				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
 			});
